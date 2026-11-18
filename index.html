@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TAPHY SAMSON 💻 | I Build Websites - Hire Me!</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#0a0a1a;color:white}
+header{background:#111;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:20}
+header b{font-size:18px}
+header b span{color:#00ff88}
+header button{background:#00ff88;border:none;padding:9px 16px;border-radius:20px;font-weight:bold;cursor:pointer}
+.hero{padding:24px 16px;text-align:center;background:linear-gradient(135deg,#6c5ce7,#00d2ff,#00ff88);color:#111}
+.hero img{width:150px;height:150px;object-fit:cover;border-radius:50%;border:5px solid white;box-shadow:0 5px 20px rgba(0,0,0,0.3)}
+.hero h1{font-size:28px;margin:12px 0 4px}
+.hero h1 span{color:#fff}
+.hero p{font-size:14px;line-height:1.5;max-width:500px;margin:auto}
+.hero .btns{display:flex;gap:10px;justify-content:center;margin-top:14px;flex-wrap:wrap}
+.hero .btns button{padding:12px 22px;border-radius:25px;border:none;font-weight:bold;cursor:pointer}
+.badge{display:inline-block;background:#111;color:#00ff88;padding:6px 14px;border-radius:20px;font-size:12px;font-weight:bold;margin-top:10px}
+.stats{display:flex;gap:10px;padding:14px;overflow-x:auto;scrollbar-width:none}
+.stats::-webkit-scrollbar{display:none}
+.stats div{background:#1a1a2e;padding:12px 16px;border-radius:12px;text-align:center;min-width:90px;flex-shrink:0}
+.stats div b{font-size:20px;color:#00ff88;display:block}
+.stats div span{font-size:11px;color:#aaa}
+.section{padding:0 14px 14px}
+.section h2{font-size:19px;margin:14px 0 10px}
+.card{background:#1a1a2e;border-radius:16px;padding:16px;margin-bottom:12px}
+.card h3{margin-bottom:5px}
+.card p{color:#aaa;font-size:13px;line-height:1.6}
+.portfolio{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.site{border-radius:16px;padding:16px;text-align:center;cursor:pointer}
+.site span{font-size:36px;display:block}
+.site b{font-size:15px;display:block;margin:6px 0}
+.site p{font-size:12px;color:#ddd;line-height:1.4}
+.site button{background:white;border:none;padding:9px 14px;border-radius:20px;font-weight:bold;cursor:pointer;margin-top:8px;width:100%}
+.price-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
+.price{border-radius:16px;padding:16px;text-align:center;border:2px solid #333}
+.price.pop{border-color:#00ff88;background:#122a1a}
+.price b{font-size:16px;display:block}
+.price .amt{font-size:22px;color:#00ff88;font-weight:bold;margin:8px 0}
+.price p{font-size:12px;color:#aaa;line-height:1.5}
+.price button{background:#00ff88;border:none;padding:10px;border-radius:20px;font-weight:bold;cursor:pointer;width:100%;margin-top:8px}
+.skill{display:flex;gap:8px;flex-wrap:wrap}
+.skill span{background:#222;padding:8px 14px;border-radius:20px;font-size:12px;font-weight:bold}
+.hire{background:linear-gradient(135deg,#00ff88,#00d2ff);color:#111;text-align:center}
+.hire input,.hire select,.hire textarea{width:100%;padding:11px;border-radius:10px;border:none;margin:7px 0;outline:none}
+.hire button{background:#111;color:white;width:100%;padding:13px;border:none;border-radius:12px;font-weight:bold;cursor:pointer}
+.reviews{display:flex;gap:10px;overflow-x:auto;scrollbar-width:none;padding-bottom:6px}
+.reviews::-webkit-scrollbar{display:none}
+.review{background:#1a1a2e;border-radius:14px;padding:14px;min-width:240px;flex-shrink:0}
+.review b{color:#00ff88}
+.bottom-nav{position:fixed;bottom:0;left:0;width:100%;background:#111;border-top:1px solid #333;padding:10px;display:flex;justify-content:space-around;font-size:11px;z-index:30}
+.bottom-nav div{text-align:center;cursor:pointer;color:#888}
+.bottom-nav div.active{color:#00ff88}
+.bottom-nav div span{display:block;font-size:22px}
+.modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.9);z-index:99;justify-content:center;align-items:center;padding:15px}
+.modalBox{background:#1a1a2e;width:100%;max-width:450px;border-radius:16px;padding:20px;text-align:center;max-height:85vh;overflow-y:auto}
+.modalBox button{padding:11px 18px;border-radius:10px;border:none;font-weight:bold;cursor:pointer;margin:5px}
+@media(min-width:700px){.portfolio{grid-template-columns:repeat(2,1fr)} .section{max-width:900px;margin:auto}}
+</style>
+</head>
+<body>
+
+<header><b>💻 TAPHY <span>SAMSON</span></b><button onclick="document.getElementById('hire').scrollIntoView({behavior:'smooth'})">HIRE ME →</button></header>
+
+<div class="hero">
+<img src="Taphy.jpg" alt="Taphy Samson">
+<div class="badge">● AVAILABLE FOR WORK</div>
+<h1>Hi, I'm <span>Taphy Samson</span></h1>
+<p>Web Developer from Homabay, Kenya 🇰🇪<br>I build beautiful, fast websites for Churches, Schools, Shops & Teams.<br>From idea to live website in 1 DAY!</p>
+<div class="btns">
+<button style="background:#111;color:white" onclick="document.getElementById('work').scrollIntoView({behavior:'smooth'})">👀 See My Work</button>
+<button style="background:white" onclick="document.getElementById('hire').scrollIntoView({behavior:'smooth'})">💰 Hire Me - From Ksh 1,500</button>
+</div>
+<p style="font-size:12px;margin-top:10px">⭐ 5.0 Rating • 22+ GitHub Repos • 50+ Websites Built</p>
+</div>
+
+<div class="stats">
+<div><b>50+</b><span>WEBSITES</span></div>
+<div><b>22</b><span>GITHUB REPOS</span></div>
+<div><b>30+</b><span>HAPPY CLIENTS</span></div>
+<div><b>1 DAY</b><span>DELIVERY</span></div>
+</div>
+
+<div class="section">
+<h2>🛠️ What I Can Build For You</h2>
+<div class="skill"><span>🌐 Church Website</span><span>🏫 School Website</span><span>🛍️ Shop Website</span><span>⚽ Team Website</span><span>🎮 Game Website</span><span>💼 Portfolio</span><span>🍔 Restaurant Menu</span><span>📱 Mobile Website</span></div>
+</div>
+
+<div class="section" id="work">
+<h2>💻 My Websites - My Work</h2>
+<p style="color:#aaa;font-size:13px;margin-bottom:10px">These are real websites I built. Click to see details!</p>
+<div class="portfolio">
+<div class="site" style="background:#ff6600" onclick="openSite('PEFA Family Website','PEFA Homabay Family - 30 People','Church family directory with Bishop, MDs, Teachers, Cooks & Coders. Search, filters, profiles.','⛪')"><span>⛪</span><b>PEFA FAMILY</b><p>30 People • Search • Profiles<br>Church Family Directory</p><button>View Project →</button></div>
+<div class="site" style="background:#00a651" onclick="openSite('PEFA Church Website','PEFA Cathedral Homabay - Official','Service times, End Year Convention 23-29 Nov, Giving, Prayer Request, Countdown.','⛪')"><span>⛪</span><b>PEFA CHURCH</b><p>Services • Convention • Giving<br>Official Church Website</p><button>View Project →</button></div>
+<div class="site" style="background:#6c5ce7" onclick="openSite('Taphy Coders Academy','Learn Coding The Fun Way','HTML, CSS, JS, Python courses. Games, Leaderboard, Live Playground. 17 Members.','💻')"><span>💻</span><b>TAPHY CODERS</b><p>Courses • Games • Playground<br>Coding Academy</p><button>View Project →</button></div>
+<div class="site" style="background:#00b894" onclick="openSite('Homabay Stars FC','Homabay Stars Football Club','Players, Fixtures, League Table, Fans Shop, Ticket Booking. Top of League!','⚽')"><span>⚽</span><b>HOMABAY STARS FC</b><p>Players • Fixtures • Shop<br>Football Club Website</p><button>View Project →</button></div>
+</div>
+</div>
+
+<div class="section">
+<h2>⭐ What People Say About Me</h2>
+<div class="reviews">
+<div class="review"><p>"Taphy built our church website in 1 day! Amazing boy!"</p><b>— Pastor Jack Ayieko, PEFA</b><p style="color:#ffcc00">⭐⭐⭐⭐⭐</p></div>
+<div class="review"><p>"My shop website is beautiful. Customers now order on WhatsApp!"</p><b>— Shop Owner, Homabay</b><p style="color:#ffcc00">⭐⭐⭐⭐⭐</p></div>
+<div class="review"><p>"He taught me coding from zero. Now I can build websites!"</p><b>— Ryan Batel, Coder</b><p style="color:#ffcc00">⭐⭐⭐⭐⭐</p></div>
+<div class="review"><p>"Best young developer in Homabay. Hire him!"</p><b>— Uncle Nicholas, Director</b><p style="color:#ffcc00">⭐⭐⭐⭐⭐</p></div>
+</div>
+</div>
+
+<div class="section">
+<h2>💰 My Prices - Hire Me</h2>
+<div class="price-grid">
+<div class="price"><b>🥉 BASIC</b><div class="amt">Ksh 1,500</div><p>1 Page Website<br>Photos + Info<br>WhatsApp Button<br>Delivery: 1 Day</p><button onclick="hireNow('BASIC - Ksh 1,500')">Choose Basic</button></div>
+<div class="price pop"><b>🥇 POPULAR ⭐</b><div class="amt">Ksh 3,500</div><p>5 Pages Website<br>Search + Gallery<br>Order / Booking Form<br>Delivery: 1-2 Days</p><button onclick="hireNow('POPULAR - Ksh 3,500')">Choose Popular</button></div>
+<div class="price"><b>💎 PRO</b><div class="amt">Ksh 7,000</div><p>Full Website + Shop<br>Cart + M-Pesa<br>Admin + Games<br>Delivery: 3 Days</p><button onclick="hireNow('PRO - Ksh 7,000')">Choose Pro</button></div>
+</div>
+<p style="color:#aaa;font-size:12px;text-align:center;margin-top:8px">Pay 50% before, 50% after website is done. Via M-Pesa.</p>
+</div>
+
+<div class="section" id="hire">
+<h2>🚀 Hire Me Now!</h2>
+<div class="card hire">
+<h3>Tell Me What Website You Want!</h3>
+<p>I will reply in less than 1 hour! ⏰</p>
+<input type="text" id="clientName" placeholder="Your Name e.g. Mama Jane">
+<input type="text" id="clientPhone" placeholder="Your WhatsApp Number e.g. 0712...">
+<select id="clientType"><option>Church Website - Ksh 1,500+</option><option>Shop Website - Ksh 3,500+</option><option>School Website - Ksh 3,500+</option><option>Football Team Website - Ksh 3,500+</option><option>Portfolio Website - Ksh 1,500</option><option>Other - Tell Me</option></select>
+<textarea id="clientMsg" placeholder="Tell me about your website... e.g. I want a shop for my clothes in Homabay Town" rows="3"></textarea>
+<button onclick="sendHire()">Send Hire Request 💬 →</button>
+<p id="hireResult" style="font-weight:bold;margin-top:8px"></p>
+</div>
+</div>
+
+<div class="section" style="padding-bottom:100px">
+<h2>📞 Contact Me</h2>
+<div class="card"><h3>Taphy Samson - Homabay, Kenya</h3><p>📍 Homabay Town, Near Soko Mjinga<br>📱 WhatsApp: Taphy Samson<br>💻 GitHub: 22 Repos • 50+ Websites<br>🕐 Available: Every Day 7AM - 9PM</p><button style="background:#00ff88;border:none;padding:11px 20px;border-radius:20px;font-weight:bold;cursor:pointer;margin-top:10px;width:100%" onclick="alert('WhatsApp Taphy Samson now! 💬 Tell him what website you want!')">💬 Message Me On WhatsApp</button></div>
+<p style="text-align:center;color:#777;font-size:12px;margin-top:10px">© 2026 Taphy Samson • Homabay, Kenya • Built by Me ❤️</p>
+</div>
+
+<div class="bottom-nav">
+<div class="active"><span>🏠</span>Home</div>
+<div onclick="document.getElementById('work').scrollIntoView({behavior:'smooth'})"><span>💻</span>Work</div>
+<div onclick="document.getElementById('hire').scrollIntoView({behavior:'smooth'})"><span>💰</span>Hire Me</div>
+<div onclick="alert('WhatsApp: Taphy Samson - Homabay')"><span>💬</span>Chat</div>
+</div>
+
+<div class="modal" id="siteModal"><div class="modalBox"><div id="siteContent"></div><button style="background:#333;color:white;width:100%" onclick="closeSite()">Close ✕</button></div></div>
+
+<script>
+function openSite(title,subtitle,desc,emoji){
+  document.getElementById('siteContent').innerHTML='<div style="font-size:60px">'+emoji+'</div><h2>'+title+'</h2><p style="color:#00ff88;font-weight:bold;margin:6px 0">'+subtitle+'</p><p style="line-height:1.6;margin:12px 0">'+desc+'</p><p style="background:#222;padding:10px;border-radius:10px">✅ Built by Taphy Samson • HTML • CSS • JS<br>⭐ Client Loved It!</p><button style="background:#00ff88" onclick="document.getElementById(\'siteModal\').style.display=\'none\';document.getElementById(\'hire\').scrollIntoView({behavior:\'smooth\'})">I Want Like This →</button>';
+  document.getElementById('siteModal').style.display='flex';
+}
+function closeSite(){ document.getElementById('siteModal').style.display='none'; }
+function hireNow(pkg){
+  document.getElementById('clientType').value=document.getElementById('clientType').options[0].text;
+  document.getElementById('hire').scrollIntoView({behavior:'smooth'});
+  alert('You chose: '+pkg+'\n\nFill the form below and Taphy will reply in 1 hour! 🚀');
+}
+function sendHire(){
+  let n=document.getElementById('clientName').value || 'Friend';
+  let t=document.getElementById('clientType').value;
+  let m=document.getElementById('clientMsg').value;
+  if(!m){ alert('Tell me what website you want first! 😊'); return; }
+  document.getElementById('hireResult').innerText='✅ Thank you '+n+'! Your request for "'+t+'" is sent! Taphy will WhatsApp you soon! 🚀❤️';
+}
+</script>
+</body>
+</html>
